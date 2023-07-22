@@ -1,0 +1,22 @@
+<ng-container *ngIf="character">
+  <div
+    class="m-4 flex flex-col text-center justify-center items-center rounded bg-slate-200 w-[300px] h-[340px] overflow-auto hover:scale-110 transition ease-in-out duration-700 hover:transition-all cursor-pointer"
+  >
+    <h3 class="text-lg font-bold m-2">{{ character.name }}</h3>
+    <img [ngSrc]="character.image" alt="" width="200" height="200" class="l" />
+    <div class="flex gap-1">
+      <p class="font-semibold">Status:</p>
+      <p class="font-thin">{{ character.status }}</p>
+    </div>
+    <div class="flex gap-1">
+      <p class="font-semibold">Species:</p>
+      <p class="font-thin">{{ character.species }}</p>
+    </div>
+    <div class="flex gap-1 mb-2">
+      <p class="font-semibold">Gender:</p>
+      <p class="font-thin">{{ character.gender }}</p>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!character"> Personaje no renderizado </ng-container>
